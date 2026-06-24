@@ -8,11 +8,11 @@ from puzzle.state import State
 class SearchResult:
     """Resultado padronizado retornado por qualquer algoritmo de busca."""
 
-    solution: Optional[State]           # Estado objetivo (None se não encontrado)
-    nodes_expanded: int = 0             # Quantos nós foram expandidos
-    nodes_generated: int = 0            # Quantos nós foram gerados (incluindo os não expandidos)
-    max_frontier_size: int = 0          # Tamanho máximo da fronteira durante a busca
-    depth: int = 0                      # Profundidade da solução
+    solution: Optional[State]           
+    nodes_expanded: int = 0             
+    nodes_generated: int = 0            
+    max_frontier_size: int = 0         
+    depth: int = 0                      
 
     @property
     def found(self) -> bool:

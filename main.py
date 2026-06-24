@@ -21,10 +21,13 @@ def print_result(name: str, result):
 
 
 if __name__ == "__main__":
-    initial = State((2, 8, 3, 1, 6, 4, 7, 0, 5))   # ~20 movimentos até a solução
+
+    initial = State((1, 2, 3, 4, 0, 5, 7, 8, 6))
 
     print("Estado inicial:")
     print(initial)
+    print("\nEstado objetivo:")
+    print(State((1, 2, 3, 4, 5, 6, 7, 8, 0)))
 
     print_result("BFS",  BFS().search(initial))
     print_result("DFS",  DFS().search(initial))
